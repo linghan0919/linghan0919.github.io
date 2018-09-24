@@ -1,0 +1,309 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Linghan's project-3</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Progress Responsive web template, Bootstrap Web Templates, Flat Web mplates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/modernizr.custom.97074.js"></script>
+<script src="js/jquery-1.8.3.min.js"></script>
+<!---->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+ <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
+		});
+	</script>
+<!---->
+
+</head>	
+<!--banner-->
+<div id="home" class="banner">	 
+	 <div class="top-menu">
+		 <div class="container">
+			 <nav class="cl-effect-1">
+				<span class="menu"><img src="images/nav-icon.png" alt=""/></span>
+			 <ul>
+				 <li><a href="../index.html" target="_blank">Home</a></li>
+				 <li><a class="scroll" href="#about">About</a></li>
+				 <li><a class="scroll" href="#service">Contributions</a></li>
+				 <li><a class="scroll" href="#gallery">Results</a></li>
+			 </ul>
+			 </nav>
+		 </div>		 
+		 <!-- script-for-menu -->
+		 <script>					
+					$("span.menu").click(function(){
+						$(".top-menu ul").slideToggle("slow" , function(){
+						});
+					});
+		 </script>
+		 <!-- script-for-menu -->	
+
+	 </div>
+	 <div class="banner-info">
+		 <div class="container">
+             <h1>Project Introduction</h1>
+             <br/>
+             <h2>Vision Correcting Display</h2>
+		 </div>
+	 </div>
+</div>
+<!---->
+<div id="about" class="about">
+	 <div class="container">		 
+		 <h3 class="abt">About</h3>
+		 <div class="about-top">
+			 <h4>background</h4>
+             <p>Vision problems, including near-sightedness, far-sightedness and higher-order aberrations such as astigmatism, trefoil and coma, are due to optical aberrations in the human eye. Traditionally, correcting optical aberrations is done optically using eyeglasses, contact lenses or refractive surgeries; however, these are sometimes not convenient or not always available to everyone. Furthermore, higher-order aberrations are not correctable with eyeglasses.The purpose of Vision Correcting Display is to enable the viewer who has vision problems to see the display in sharp focus without requiring the use of eyewear. To achieve the goal, the main idea is to <b>“digitally” modify the content based on aberration-correcting light field on a display device</b>: when viewed by a particular user, the computation will incorporate the person's own optical aberration and alter the image shown on screen, such that the individual will be able to see clearly. The project has been selected as <b>one of 2014's ten "World Changing Ideas"</b> by <i>Scientific American</i>.</p>
+		 </div>
+		 <div class="about-grids">
+			 <div class="col-md-6 about-grid-info">
+			     <h3>Basic Ideas.</h3>
+                 <p>There are two main stages: one is to pre-filter and another is to simulate.</p>
+				 <h4>pre-filtering</h4>
+				 <p>In the first part, we are aimed to figure out the projection relationship between a point on the screen and its corresponding point on the sensor within a light field, and then we use this projection relationship to infer the image that should be displayed on the screen with the assumption that it can be shown perfectly on the sensor.</p>
+                 <h4>simulation</h4>
+                 <p>In the second part, we simulate different display methods, including Pinhole Mask and Lens Array, to check whether the pre-filtered image can be seen clearly even if not in focus. Look at the left part of the figure. The simulation is upside down because we are simulating images displayed on retina.</p>
+			 </div>
+			 <div class="col-md-6 about-pic">
+				 <a href="http://58.196.136.172:8080/templete/moban1239/" target="_blank" title="left is simulation result; right is pre-filtered image"><img src="images/rabbit.png" class="img-responsive" alt=""/></a>
+			 </div>
+			 <div class="clearfix"></div>
+		 </div>
+	 </div>
+</div>
+<!---->
+<div id="service" class="service">
+	 <div class="container">
+		 <h3 class="ser">Contributions</h3>
+		 <div class="service-grids">
+			 <div class="service-grid">
+				 <div class="col-md-4 service-pic">
+					 <img src="images/a1.jpg" class="img-responsive" alt=""/>
+				 </div>
+				 <div class="col-md-8 service-info">
+					 <h3>Correcting Higher-Order Aberrations</h3>
+					 <p>Higher-order aberrations or HOA, of which coma and trefoil are typical examples, are more complex vision errors than lower-order aberrations like nearsightedness and farsightedness. Through a process of study and practice, I finally implemented programs to correct HOA successfully with  <b>Zernike Polynomials</b>, which are a set of functions to describe the shape of an aberrated wavefront in the pupil. In our project, I used Zernike Coefficients in Cartesian coordinate to denote the normal directions of rays leaving the pupil and then I analyzed the light path to acquire the projection relationship. In this way, HOA could be corrected in a similar way as defocus correction algorithm did. My program only focused on some typical cases such as <b>vertical/horizontal coma</b> and <b>vertical/oblique trefoil</b>, but it could be extended to even higher-order aberrations easily, too. <a href="images/ReportOfHOA.pdf" target="_blank"><u>Report</u></a></p>
+                     <p class="large"><a class="more-link"><i class="fa fa-camera"></i> Zoom In </a><img src="images/a1.jpg" class="img-responsive" id="pic"></p>
+				 </div>
+				 <div class="clearfix"></div>
+			 </div>
+			 <div class="service-grid">
+				 <div class="col-md-4 service-pic">
+					 <img src="images/a2.jpg" class="img-responsive" alt=""/>
+				 </div>
+				 <div class="col-md-8 service-info">
+					 <h3>a New Eye Model</h3>
+					 <p>During the research, I have thrown doubt on the correctness of our previously used computational model. Before, we assumed that the blur was caused by difference between <i>focalObj</i> (distance between focal plane and lens) and <i>disObj</i> (distance between screen and lens). And we took <i>disImg</i> (distance between real image and lens) as exact <i>eyeDepth</i>(distance from retina to lens). Nevertheless, from my understanding, the reality is more like the second model shown left. <b>The <i>focalObj</i> is always the same as <i>disObj</i> while the blur was caused by difference between <i>disImg</i> and <i>eyeDepth</i>.</b> After discussing with team leader, he totally agreed with my opinion and then I made some changes in code.</p>
+                     <p class="large"><a class="more-link"><i class="fa fa-camera"></i> Zoom In </a><img src="images/a2.jpg" class="img-responsive" id="pic"></p>
+				 </div>
+				 <div class="clearfix"></div>
+			 </div>
+			 <div class="service-grid">
+				 <div class="col-md-4 service-pic">
+					 <img src="images/a3.jpg" class="img-responsive" alt=""/>
+				 </div>
+				 <div class="col-md-8 service-info">
+					 <h3>Sparse Projection Matrix</h3>
+					 <p>In previous algorithm model, we simplified the problem as <b>one-one projection</b>, which means one screen pixel could only emit one ray, and then map only one position on sensor. Next, we assumed that this pixel was responsible for its mapping point and when the image on sensor is clear, we can trace back the color on screen pixel according to this sensor point. However, in fact, one position on sensor can receive more than one rays and should be affected by colors of different pixels. Thus, <b>many-many projection</b> would be a better choice and a <b>large sparse matrix</b> could be used to represent the projection relationship.</p>
+                     <br/>
+                     <p>The basic idea is that, we use vector <i>x</i> to represent the image display on screen and vector <i>b</i> to represent the image on sensor. Then, there exists a mapping relationship matrix <i>A</i>, which makes <b><i>Ax=b</i></b>. Consequently, by first computing matrix <i>A</i> and then solving the equation to get <i>x</i>, we can acquire the pre-filtered image. In order to reduce huge calculation cost, I divided the matrix into 3 RGB sub-matrices later. As shown in figure row-4-col-1 below.</p>
+                     <br/>
+                     <p>There are two stages to solve the problem: <b>1) build the projection matrix; 2) solve the linear equation.</b> To deal with the sparse matrix, I chose open-source library <b>Eigen</b> as a tool. And I have been trying many different mothods to solve the linear system, including Cholesky decomposition, QR decomposition, LU decomposition and other iterative methods like <b>multigrid</b>. I am still working on this.</p>
+                     <p class="large"><a class="more-link"><i class="fa fa-camera"></i> Zoom In </a><img src="images/a3.jpg" class="img-responsive" id="pic"></p>
+				 </div>
+				 <div class="clearfix"></div>
+			 </div>
+             <div class="service-grid">
+				 <div class="col-md-4 service-pic">
+					 <img src="images/a4.jpg" class="img-responsive" alt=""/>  
+				 </div>
+				 <div class="col-md-8 service-info">
+					 <h3>Other Attempts and Experiments</h3>
+                     <p>I also came up with other ideas and tried more experiments to make improvement. 1) <b>higher-resolution sensor</b>. Since human eye is very sensitive, our assumption that sensor and screen have the same resolution might lead to problems, say detail-loss. I have tried to make some change, however, it didn't get my expected effect. 2) <b>Circinate-patterned sampling</b>. In simulation stage, we sampled randomly on lens previously and I proposed to try circinate-patterned sampling instead. The figure beside shows an example of circinate pattern. But again, the change didn't make progress.</p>
+                     <p class="large"><a class="more-link"><i class="fa fa-camera"></i> Zoom In </a><img src="images/a4.jpg" class="img-responsive" id="pic"></p>
+				 </div>
+				 <div class="clearfix"></div>
+			 </div>
+		 </div>
+	 </div>
+</div>
+<!---->
+<!--script-->
+<script src="js/jquery.chocolat.js"></script>		
+		<!--light-box-files -->
+		<script type="text/javascript">
+		$(function() {
+			$('.gallery a').Chocolat();
+		});
+		</script>
+<!--script-->
+<div class="gallery" id="gallery">
+		<div class="container">
+			<h3>Results</h3>
+			<div class="gallery-grids">
+			<section>
+				<ul id="da-thumbs" class="da-thumbs">
+					<li>
+						<a href="images/p1.png" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p1.png" alt="" />
+							<div>
+								<h5>Oblique Astigmatism</h5>
+								<span>Pre-filtered image; Pinhole Mask; LensArray</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="images/p2.png" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p2.png" alt="" />
+							<div>
+								<h5>Vertical Astigmatism</h5>
+								<span>Pre-filtered image; Pinhole Mask; LensArray</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="images/p3.png" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p3.png" alt="" />
+							<div>
+								<h5>Vertical Trefoil</h5>
+								<span>Pre-filtered image; Pinhole Mask; LensArray</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="images/p4.png" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p4.png" alt="" />
+							<div>
+								<h5>Vertical Coma</h5>
+								<span>Pre-filtered image; Pinhole Mask; LensArray</span>
+							</div>
+						</a>
+					</li>
+					<li>	
+						<a href="images/p5.png" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p5.png" alt="" />
+							<div>
+								<h5>Horizontal Coma</h5>
+								<span>Pre-filtered image; Pinhole Mask; LensArray</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="images/p6.png" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p6.png" alt="" />
+							<div>
+								<h5>Oblique Trefoil</h5>
+								<span>Pre-filtered image; Pinhole Mask; LensArray</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="images/p7.jpg" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p7.jpg" alt="" />
+							<div>
+								<h5>No need to pre-filter</h5>
+								<span>disObj:300, normal eye, in range</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="images/p8.jpg" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p8.jpg" alt="" />
+							<div>
+								<h5>need pre-filtering</h5>
+								<span>disObj:300, astigmatism, in range</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="images/p9.jpg" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p9.jpg" alt="" />
+							<div>
+								<h5>need pre-filtering</h5>
+								<span>disObj:300, myopic eye, out of range</span>
+							</div>
+						</a>
+					</li>	
+                    <li>
+						<a href="images/p10.png" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p10.png" alt="" />
+							<div>
+								<h5>Sparse Projection Matrix</h5>
+								<span>Divide a large matrix into three sub-matrices to save memory</span>
+							</div>
+						</a>
+					</li>	
+                    <li>
+						<a href="images/p11.png" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p11.png" alt="" />
+							<div>
+								<h5>Sparse Projection Matrix</h5>
+								<span>a figure shows the matrix A</span>
+							</div>
+						</a>
+					</li>	
+                    <li>
+						<a href="images/p12.png" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p12.png" alt="" />
+							<div>
+								<h5>Sparse Projection Matrix</h5>
+								<span>about acquiring the projection matrix</span>
+							</div>
+						</a>
+					</li>		
+				</ul>
+				<div class="clearfix"> </div>
+			</section>
+			<script type="text/javascript" src="js/jquery.hoverdir.js"></script>	
+		<script type="text/javascript">
+			$(function() {
+			
+				$(' #da-thumbs > li ').each( function() { $(this).hoverdir(); } );
+
+			});
+		</script>
+        </div>
+	</div>
+</div>
+    
+<!--//gallery-->
+
+<!---->
+<div class="footer">
+	 <div class="container">
+		 <div class="copywrite">
+			 <p>linghan0919@163.com</p>
+		 </div>
+		 <div class="clearfix"></div>
+	 </div>
+</div>
+<!---->
+<script type="text/javascript">
+		$(document).ready(function() {
+				/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+				*/
+		$().UItoTop({ easingType: 'easeOutQuart' });
+});
+</script>
+<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<!----> 
+</body>
+</html>

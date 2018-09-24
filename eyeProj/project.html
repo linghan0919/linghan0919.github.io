@@ -1,0 +1,374 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Linghan's project-1</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Progress Responsive web template, Bootstrap Web Templates, Flat Web mplates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/modernizr.custom.97074.js"></script>
+<script src="js/jquery-1.8.3.min.js"></script>
+<!---->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+ <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
+		});
+	</script>
+<!---->
+
+</head>	
+<!--banner-->
+<div id="home" class="banner">	 
+	 <div class="top-menu">
+		 <div class="container">
+			 <nav class="cl-effect-1">
+				<span class="menu"><img src="images/nav-icon.png" alt=""/></span>
+			 <ul>
+				 <li><a href="../index.html" target="_blank">Home</a></li>
+				 <li><a class="scroll" href="#about">About</a></li>
+				 <li><a class="scroll" href="#service">Algorithms</a></li>
+				 <li><a class="scroll" href="#gallery">Results</a></li>
+				 <li><a class="scroll" href="#testi">Publication</a></li>
+			 </ul>
+			 </nav>
+		 </div>		 
+		 <!-- script-for-menu -->
+		 <script>					
+					$("span.menu").click(function(){
+						$(".top-menu ul").slideToggle("slow" , function(){
+						});
+					});
+		 </script>
+		 <!-- script-for-menu -->	
+
+	 </div>
+	 <div class="banner-info">
+		 <div class="container">
+             <h1>Project Introduction</h1>
+             <br/>
+             <h2>Automatic Diabetic-Retinopathy Diagnostic System</h2>
+		 </div>
+	 </div>
+</div>
+<!---->
+<div id="about" class="about">
+	 <div class="container">		 
+		 <h3 class="abt">About</h3>
+		 <div class="about-top">
+			 <h4>background</h4>
+			<p>Diabetic-Retinopathy(DR), which can cause loss of vision and even blindness, is one of the most common eye diseases today. It is an ocular manifestation of diabetes, which affects up to 80 percent of all patients who have had diabetes for 20 years or more. However, despite these intimidating statistics, research indicates that at least 90% of these new cases could be reduced if there were proper and vigilant treatment and monitoring of the eyes. Thus, our research group is aimed to design an automatic diabetic retinopathy diagnostic system to help patients know about their retinal conditions.</p>
+             <br/>
+             <h4>my contributions</h4>
+			 <p>1) Applied multi-scale line detector algorithm to segment retinal blood vessel and made progress in accuracy.</p>
+             <p>2) Implemented both accurate and efficient programs based on morphological operations for optic disk and macular localization, hard exudates, hemorrhage and microaneurysm detection.</p>
+             <p>3) Built a website for the whole system, which takes a patient's fundus image as input, analyzes the image using my algorithm automatically and displays a diagnostic report as output.</p>
+		 </div>
+		 <div class="about-grids">
+			 <div class="col-md-6 about-grid-info">
+			     <h3>Algorithm Features.</h3>
+				 <h4>multi-scale line operator</h4>
+				 <p>We applied a multi-scale line detector <a title="Nguyen U T V, Bhuiyan A, Park L A F, et al. An effective retinal blood vessel segmentation method using multi-scale line detection[J]. Pattern Recognition, 2013, 46(3):703-715.">[1]</a> to improve small-scale vessel segmentation accuracy in our system. By changing the length of a basic line detector, varing scales are achieved. And then the line responses at varying scales are linearly combined to produce the final segmentation for each retinal image.</p>
+				 <h4>morphological image processing</h4>
+				 <p>Morphological image processing is a technique that utilizes a set of operators, including erosion, dilation, opening and closing, to transform images according to the characterizations such as size, shape and geodestic distance. We applied morphological transformation frequently in our program.</p>
+			 </div>
+			 <div class="col-md-6 about-pic">
+				 <a href="http://58.196.136.172:8080/templete/moban1239/" target="_blank" title="enter the system"><img src="images/project-dr.png" class="img-responsive" alt=""/></a>
+			 </div>
+			 <div class="clearfix"></div>
+		 </div>
+	 </div>
+</div>
+<!---->
+<div id="service" class="service">
+	 <div class="container">
+		 <h3 class="ser">Algorithms</h3>
+		 <div class="service-grids">
+			 <div class="service-grid">
+				 <div class="col-md-4 service-pic">
+					 <img src="images/a1.jpg" class="img-responsive" alt=""/>
+				 </div>
+				 <div class="col-md-8 service-info">
+					 <h3>Vessel Segmentation</h3>
+                     <p>The line detector algorithm works on the <b>inverted green channel</b> of a fundus image for a stronger contrast and less noise. During the pre-processing stage, we apply morphological dilation operation in order to achieve <b>the growth of retinal layer boundary</b>. Then at each pixel position, a window of size 15x15 pixels is identified and the average gray level is computed as <i>I_avg</i>. Next, <b>line detectors at varying scales</b> oriented at 12 different directions are identified and for each scale we can get line response as <i>R_w=I_max-I_avg</i>, where the <i>I_max</i> is the maximum value of the line among 12 different directions. Finally, we acquire the final response by <b>linearly combining</b> these results <i>R_combined=avg(R_w at varying scales)</i> and use a single threshold to judge the classification.</p>
+                     <p class="large"><a class="more-link"><i class="fa fa-camera"></i> Zoom In </a><img src="images/a1.jpg" class="img-responsive" id="pic"></p>
+				 </div>
+				 <div class="clearfix"></div>
+			 </div>
+			 <div class="service-grid">
+				 <div class="col-md-4 service-pic">
+					 <img src="images/a2.jpg" class="img-responsive" alt=""/>
+				 </div>
+				 <div class="col-md-8 service-info">
+					 <h3>Optic Disk and Macular Localization</h3>
+                     <p>Before localize the optic disk, we first use <b>histogram equalization</b> and <b>mean filtering</b> to enhance the contrast and eliminate the background noise. Then we assume that the average coordinates of the brightest points is the center of optic disk and draw a <b>region of interest</b> around the center. In order to avoid the negative influence of vessels, we use image restoration algorithm based on fast marching method to <b>erase the vessels</b>. Finally we search the points that have <b>maximum grayscale gradient</b> around the center and localize the optic disk edge by <b>ellipse fitting</b>. Macular can be easily detected by combining the relative location relationship and contast feature after optic disk detection.</p>
+                     <p class="large"><a class="more-link"><i class="fa fa-camera"></i> Zoom In </a><img src="images/a2.jpg" class="img-responsive" id="pic"></p>
+				 </div>
+				 <div class="clearfix"></div>
+			 </div>
+			 <div class="service-grid">
+				 <div class="col-md-4 service-pic">
+					 <img src="images/a3.jpg" class="img-responsive" alt=""/>
+				 </div>
+				 <div class="col-md-8 service-info">
+					 <h3>Hard Exudates Detection</h3>
+                     <p>In order to detect hard exudates, we use many <b>morphological operations</b> to process fundus image. First, closing operation is applied to elimate vessels' negative influence. Then we search for the border of hard exudates area by calculating the <b>standard deviation</b> within a window for each fundus pixel. What follows is a series of dilate morphological transformation that aimed to acquire the <b>non-lesion background</b>. At last, the difference between original fundus image and non-lesion background can be used to decide whether a pixel belongs to exudates area or not.</p>
+                     <p class="large"><a class="more-link"><i class="fa fa-camera"></i> Zoom In </a><img src="images/a3.jpg" class="img-responsive" id="pic"></p>
+				 </div>
+				 <div class="clearfix"></div>
+			 </div>
+             <div class="service-grid">
+				 <div class="col-md-4 service-pic">
+					 <img src="images/a4.jpg" class="img-responsive" alt=""/>  
+				 </div>
+				 <div class="col-md-8 service-info">
+					 <h3>Hemorrhage Detection</h3>
+                     <p>Hemorrhage is an important topic for Diabetic-Retinopathy diagnostic. The <b>pre-processing</b> step is to correct brightness of fundus image and apply contrast-limited histogram equalization, so as to improve the adaptability of the algorithm to satisfy different images. Then <b>a mixed zone</b> of both vessels and hemorrhage area can be detected based on threshold judging. Next we apply <b>Kirsch operator</b> to find the edges of vessels and by removing vessels from mixed zone, we can achieve the detection of hemorrhage area.</p>
+                     <p class="large"><a class="more-link"><i class="fa fa-camera"></i> Zoom In </a><img src="images/a4.jpg" class="img-responsive" id="pic"></p>
+				 </div>
+				 <div class="clearfix"></div>
+			 </div>
+             <div class="service-grid">
+				 <div class="col-md-4 service-pic">
+					 <img src="images/a5.jpg" class="img-responsive" alt=""/>
+				 </div>
+				 <div class="col-md-8 service-info">
+					 <h3>Microaneurysm Detection</h3>
+                     <p>In the first stage of Diabetic-Retinopathy which is called non-proliferative diabetic retinopathy(NPDR), the signs are not visible to naked eyes. The only way to detect NPDR is by fundus photography, in which microaneurysm can be seen. To mitigate the negative effect of background noise, we first apply <b>mean filtering</b> to splitted G channel of fundus image. Next, we use <b>histogram equalization</b> to enhance the contrast and the same as hemorrhage detection, a mixed zone of both vessels and microaneurysm can be detected based on threshold judging. Then a few morphological transformations are used to <b>eliminate the vessels</b>. In the end, microaneurysm can be detected by <b>finding contours</b> of the left mixed zone.</p>
+                     <p class="large"><a class="more-link"><i class="fa fa-camera"></i> Zoom In </a><img src="images/a5.jpg" class="img-responsive" id="pic"></p>
+				 </div>
+				 <div class="clearfix"></div>
+			 </div>
+		 </div>
+	 </div>
+</div>
+<!---->
+<!--script-->
+<script src="js/jquery.chocolat.js"></script>		
+		<!--light-box-files -->
+		<script type="text/javascript">
+		$(function() {
+			$('.gallery a').Chocolat();
+		});
+		</script>
+<!--script-->
+<div class="gallery" id="gallery">
+		<div class="container">
+			<h3>Results</h3>
+			<div class="gallery-grids">
+			<section>
+				<ul id="da-thumbs" class="da-thumbs">
+					<li>
+						<a href="images/p1.png" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p1.png" alt="" />
+							<div>
+								<h5>Vessel Segmentation</h5>
+								<span>original fundus image</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="images/p2.png" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p2.png" alt="" />
+							<div>
+								<h5>Vessel Segmentation</h5>
+								<span>boundary growth</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="images/p3.png" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p3.png" alt="" />
+							<div>
+								<h5>Vessel Segmentation</h5>
+								<span>segmentation result</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="images/p4.png" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p4.png" alt="" />
+							<div>
+								<h5>Optic Disk and Macular Localization</h5>
+								<span>fundus image with optic disk center marked</span>
+							</div>
+						</a>
+					</li>
+					<li>	
+						<a href="images/p5.png" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p5.png" alt="" />
+							<div>
+								<h5>Optic Disk and Macular Localization</h5>
+								<span>region of interest(ROI) with vessel erased</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="images/p6.png" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p6.png" alt="" />
+							<div>
+								<h5>Optic Disk and Macular Localization</h5>
+								<span>fundus image with optic disk and macular localized</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="images/p7.png" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p7.png" alt="" />
+							<div>
+								<h5>Hard Exudates Detection</h5>
+								<span>border of hard exudates area detected</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="images/p8.png" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p8.png" alt="" />
+							<div>
+								<h5>Hard Exudates Detection</h5>
+								<span>non-lesion background</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="images/p9.png" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p9.png" alt="" />
+							<div>
+								<h5>Hard Exudates Detection</h5>
+								<span>fundus image with hard exudates detected</span>
+							</div>
+						</a>
+					</li>	
+                    <li>
+						<a href="images/p10.png" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p10.png" alt="" />
+							<div>
+								<h5>Hemorrhage Detection</h5>
+								<span>pre-processed image with brightness corrected and contrast improved</span>
+							</div>
+						</a>
+					</li>	
+                    <li>
+						<a href="images/p11.png" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p11.png" alt="" />
+							<div>
+								<h5>Hemorrhage Detection</h5>
+								<span>mixed zone of both vessels and hemorrhage area</span>
+							</div>
+						</a>
+					</li>	
+                    <li>
+						<a href="images/p12.png" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p12.png" alt="" />
+							<div>
+								<h5>Hemorrhage Detection</h5>
+								<span>fundus image with hemorrhage detected</span>
+							</div>
+						</a>
+					</li>	
+                     <li>
+						<a href="images/p13.png" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p13.png" alt="" />
+							<div>
+								<h5>Microaneurysm Detection</h5>
+								<span>pre-processed image after mean-filtering and histogram equalization</span>
+							</div>
+						</a>
+					</li>	
+                    <li>
+						<a href="images/p14.png" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p14.png" alt="" />
+							<div>
+								<h5>Microaneurysm Detection</h5>
+								<span>Vessel eliminated</span>
+							</div>
+						</a>
+					</li>	
+                    <li>
+						<a href="images/p15.png" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p15.png" alt="" />
+							<div>
+								<h5>Microaneurysm Detection</h5>
+								<span>contours of microaneurysm found</span>
+							</div>
+						</a>
+					</li>	
+				</ul>
+				<div class="clearfix"> </div>
+			</section>
+			<script type="text/javascript" src="js/jquery.hoverdir.js"></script>	
+		<script type="text/javascript">
+			$(function() {
+			
+				$(' #da-thumbs > li ').each( function() { $(this).hoverdir(); } );
+
+			});
+		</script>
+        </div>
+	</div>
+</div>
+    
+<!--//gallery-->
+
+<div id="testi" class="pricing">
+	 <div class="container">
+		 <div class="pricing-text">			
+			<h3>Publication</h3>				
+		 </div>
+		 <!-- start slider -->	
+		 <div class="pricing-grids">
+			 <div class="slider">
+				 <ul class="rslides" id="slider2">
+					 <li>						 
+					     <div class="col-md-6 pricing-plans">
+                             <p>Second Author of <br/>
+                              <b>Retinal Optic Disk Localization Using Convergence Tracking of Blood Vessels</b><br/>
+                               accepted by <i>"Multimedia Tools and Applications"</i>.</p>
+                              <p>Second Author of <br/>
+                              <b>Automatic Diabetic Retinopathy Diagnosis Using Adjustable Opthalmoscope and Multi-scale Line Operator</b><br/>
+                               submitted to <i>"Pervasive and Mobile Computing"</i>.</p>
+							  <div class="clearfix"></div>
+						 </div>			  					  
+					  </li>		
+				  </ul>
+			   </div>
+			   <!-- end slider -->
+		  </div>  	
+	 </div>
+</div>
+<!---->
+<div class="footer">
+	 <div class="container">
+		 <div class="copywrite">
+			 <p>linghan0919@163.com</p>
+		 </div>
+		 <div class="clearfix"></div>
+	 </div>
+</div>
+<!---->
+<script type="text/javascript">
+		$(document).ready(function() {
+				/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+				*/
+		$().UItoTop({ easingType: 'easeOutQuart' });
+});
+</script>
+<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<!----> 
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Linghan's project-2</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Progress Responsive web template, Bootstrap Web Templates, Flat Web mplates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/modernizr.custom.97074.js"></script>
+<script src="js/jquery-1.8.3.min.js"></script>
+<!---->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+ <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
+		});
+	</script>
+<!---->
+
+</head>	
+<!--banner-->
+<div id="home" class="banner">	 
+	 <div class="top-menu">
+		 <div class="container">
+			 <nav class="cl-effect-1">
+				<span class="menu"><img src="images/nav-icon.png" alt=""/></span>
+			 <ul>
+				 <li><a href="../index.html" target="_blank">Home</a></li>
+				 <li><a class="scroll" href="#about">About</a></li>
+				 <li><a class="scroll" href="#service">Contributions</a></li>
+				 <li><a class="scroll" href="#gallery">Results</a></li>
+                 <li><a class="scroll" href="#testi">Publication</a></li>
+			 </ul>
+			 </nav>
+		 </div>		 
+		 <!-- script-for-menu -->
+		 <script>					
+					$("span.menu").click(function(){
+						$(".top-menu ul").slideToggle("slow" , function(){
+						});
+					});
+		 </script>
+		 <!-- script-for-menu -->	
+
+	 </div>
+	 <div class="banner-info">
+		 <div class="container">
+             <h1>Project Introduction</h1>
+             <br/>
+             <h2>Real-time Tracking and Analyzing System for Soccer Games</h2>
+		 </div>
+	 </div>
+</div>
+<!---->
+<div id="about" class="about">
+	 <div class="container">		 
+		 <h3 class="abt">About</h3>
+		 <div class="about-top">
+			 <h4>background</h4>
+			<p>Soccer is one of the most popular sports in the world and soccer game analysis has always been a hot spot for soccer lovers. Nowadays, with the rapid development of computer science and technology, automatic analysis systems have already been designed and implemented in some countries in order to reduce the workload and labor cost. However, as modern soccer industry is still in infancy in China, there isn't a very mature and well-developed analysis system in our market so far. As a result, our research group is aimed to develop a real-time system to help track players' movements under multi-view videos and automaticlly analyze their performance in a soccer game. This is a cooperation project with Shanghai Sports School and our system is planned to be applied in their future teaching activities.</p>	
+		 </div>
+		 <div class="about-grids">
+			 <div class="col-md-6 about-grid-info">
+                 <h3>My Work.</h3>
+                 <h4>team leader of tracking algorithm group</h4>
+                 <p>I am the team leader of tracking algorithm group and my major work focus on soccer players tracking and ball detection task. At the beginning of our research, we chose <b>Spatio-Temporal Context Learning</b> <a title="Zhang K, Zhang L, Yang M H, et al. Fast Tracking via Spatio-Temporal Context Learning[J]. Computer Science, 2013.">[1]</a> to achieve the tracking in <b>MATLAB</b>. In order to avoid negative effect of occlusions and improve accuracy, we also combined video information from different views. Then, considering that spatio-temporal context is more applicable in complex scenes and MATLAB has a relatively low speed, we turned to develop a <b>C++ & openCV</b> program based on <b>Matching Summary Representation</b> <a title="Forsyth D A, Ponce J. Compute r Vision: A Modern Approach[M]. Prentice Hall Professional Technical Reference, 2002. Section 11.2.1">[2]</a>. Nevertheless, ball detection is always a challenging task, as the ball is too small in long shot vedio and its features vary over frames. So I used information in <b>HSV space</b> to help raise accuracy of ball detection. Recently, I am continuing trying to make progress in both speed and performance.</p>
+			 </div>
+			 <div class="col-md-6 about-pic">
+				 <img src="images/track.gif" class="img-responsive" alt=""/>
+			 </div>
+			 <div class="clearfix"></div>
+		 </div>
+	 </div>
+</div>
+<!---->
+<div id="service" class="service">
+	 <div class="container">
+		 <h3 class="ser">Contributions</h3>
+		 <div class="service-grids">
+			 <div class="service-grid">
+				 <div class="col-md-4 service-pic">
+					 <img src="images/project-soccer.png" class="img-responsive" alt=""/>
+				 </div>
+				 <div class="col-md-8 service-info">
+					 <h3>MATLAB version based on Spatio-Temporal Context Learning</h3>
+                     <p>Spatio-Temporal Context Learning is an effective and robust tracking algorithm which exploits the spatio-temporal context for visual tracking. The approach takes advantage of <b>the relationship between the local scenes containing the object in consecutive frames</b> and realizes the tracking by computing a <b>confidence map</b>. Source code that is implemented in MATLAB and can detect one walking man is avaliable online. However, I made some adjustment to the original code and achieved the <b>tracking of more than one person</b>. Moreover, I took the video information from <b>different pespectives</b> into consideration and as a result, even if there exist occultions in one perspective, we may still track players correctly with videos of other views, thus avoiding the loss of target. Besides, I also developed <b>a simple demo using MATLAB GUI</b> to demonstate our idea of the system. As the left image shows, the demo system takes video frames of two perspectives as input and prints a corresponding plane graph and a trajectory diagram as output. The initial positions are located manually by users.</p>
+                     <p class="large"><a class="more-link"><i class="fa fa-camera"></i> Zoom In </a><img src="images/project-soccer.png" class="img-responsive" id="pic"></p>
+				 </div>
+				 <div class="clearfix"></div>
+			 </div>
+             
+			 <div class="service-grid">
+				 <div class="col-md-4 service-pic">
+					 <img src="images/demo1.jpg" class="img-responsive" alt=""/>
+				 </div>
+				 <div class="col-md-8 service-info">
+					 <h3>C++ version based on Matching Summary Representation</h3>
+                     <p>Matching Summary Representation(MSR) is a method proposed in book <i>Computer Vision: A Modern Approach</i>. The general idea is that, although the small-scale details such as colors of an individual pixel or the responses of oriented filteres might change from frame to frame, a summary representation of the domain might always hold similarities. A <b>histogram representation</b> is an attractive choice because two histograms will be similar only when the two patches have similar numbers of similar structures in them. So we implemented a C++ program based on MSR to track the players' movements. <b>The speed has become faster than previous MATLAB version based on CT, but the performance is almost the same.</b> Also, the initial positions are located manually by users.</p>
+                     <p class="large"><a class="more-link"><i class="fa fa-camera"></i> Zoom In </a><img src="images/demo1.jpg" class="img-responsive" id="pic"></p>
+				 </div>
+				 <div class="clearfix"></div>
+			 </div>
+			 
+             <div class="service-grid">
+				 <div class="col-md-4 service-pic">
+					 <img src="images/algorithm.jpg" class="img-responsive" alt=""/>  
+				 </div>
+				 <div class="col-md-8 service-info">
+					 <h3>improvement of Ball Detection</h3>
+                     <p>Ball detection and tracking is important but also challenging for soccer game analysis as many problems may affect the detection result. However, previously we just used the same algorithm to deal with ball and players, which led to the loss of ball sometimes. Thus, I decided to add some special steps to adjust ball detection. First, I <b>selected a region of interest(ROI)</b> around the detected ball via MSR. Then, in the ROI, the <b>ground is extracted</b> in HSV color space. Next <b>ball candidates</b> are searched in term of <b>size and shape </b> analysis. If the detected ball is close to a ball candidate, the detection is believed to be correct, otherwise, the candidates need to be <b>further examined in detail</b> such as gray level, circularity and distance to determine the optimal object. As a consequence, the lost ball can be detected again.</p>
+                     <p class="large"><a class="more-link"><i class="fa fa-camera"></i> Zoom In </a><img src="images/algorithm.jpg" class="img-responsive" id="pic"></p>
+				 </div>
+				 <div class="clearfix"></div>
+			 </div>
+             
+             <div class="service-grid">
+				 <div class="col-md-4 service-pic">
+					 <img src="images/transform.png" class="img-responsive" alt=""/>
+				 </div>
+				 <div class="col-md-8 service-info">
+					 <h3>Plane Graph</h3>
+					 <p>To indicate the tracking results more clearly, the reconstruction of a two-dimensional model of the field is necessary. Thus, we need conduct perspective transformation from a video view to plane graph. In MATLAB version, the transformation matrix is computed by function <b>estimateGeometricTransfrom</b> and is used by function <b>transformPointsForward</b>. While in C++ & openCV version, the matrix is computed by function <b>cv::getPerspectiveTransform</b> and is used by function <b>cv::perspectiveTransform</b>. The left image shows an example of the corresponding projection relationship.</p>
+                     <p class="large"><a class="more-link"><i class="fa fa-camera"></i> Zoom In </a><img src="images/transform.png" class="img-responsive" id="pic"></p>
+				 </div>
+				 <div class="clearfix"></div>
+			 </div>
+		 </div>
+	 </div>
+</div>
+<!---->
+<!--script-->
+<script src="js/jquery.chocolat.js"></script>		
+		<!--light-box-files -->
+		<script type="text/javascript">
+		$(function() {
+			$('.gallery a').Chocolat();
+		});
+		</script>
+<!--script-->
+<div class="gallery" id="gallery">
+		<div class="container">
+			<h3>Results</h3>
+			<div class="gallery-grids">
+			<section>
+				<ul id="da-thumbs" class="da-thumbs">
+                    <li>
+						<a href="images/p0.jpg" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p0.jpg" alt="" />
+							<div>
+								<h5>Matlab Demo</h5>
+								<span>user interface of my simple matlab version tracking system</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="images/p1.jpg" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p1.jpg" alt="" />
+							<div>
+								<h5>Matlab Demo</h5>
+								<span>initialization of players' positions in the 1st perspective</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="images/p2.jpg" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p2.jpg" alt="" />
+							<div>
+								<h5>Matlab Demo</h5>
+								<span>initialization of players' positions in the 2nd perspective</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="images/p3.jpg" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p3.jpg" alt="" />
+							<div>
+								<h5>Matlab Demo</h5>
+								<span>plane graph showing the current positions of each player</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="images/p4.jpg" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p4.jpg" alt="" />
+							<div>
+								<h5>Matlab Demo</h5>
+								<span>trajectory diagram of soccer players</span>
+							</div>
+						</a>
+					</li>
+					<li>	
+						<a href="images/p5.jpg" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p5.jpg" alt="" />
+							<div>
+								<h5>Matlab Demo</h5>
+								<span>heat map showing the range of players' activities of a soccer game</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="images/p6.jpg" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p6.jpg" alt="" />
+							<div>
+								<h5>C++ Version</h5>
+								<span>track soccer players in video frames</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="images/p7.jpg" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p7.jpg" alt="" />
+							<div>
+								<h5>C++ Version</h5>
+								<span>plane graph showing the current positions of each player</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="images/p8.jpg" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p8.jpg" alt="" />
+							<div>
+								<h5>C++ Version</h5>
+								<span>manually locate the initial positions for each player</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="images/p9.png" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p9.png" alt="" />
+							<div>
+								<h5>Ball Candidates Detection</h5>
+								<span>original image in HSV space</span>
+							</div>
+						</a>
+					</li>	
+                    <li>
+						<a href="images/p10.png" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p10.png" alt="" />
+							<div>
+								<h5>Ball Candidates Detection</h5>
+								<span>ground extraction</span>
+							</div>
+						</a>
+					</li>	
+                    <li>
+						<a href="images/p11.png" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p11.png" alt="" />
+							<div>
+								<h5>Ball Candidates Detection</h5>
+								<span>ball candidates extraction in terms of size and shape</span>
+							</div>
+						</a>
+					</li>	
+                    <li>
+						<a href="images/p12.png" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p12.png" alt="" />
+							<div>
+								<h5>Plane Graph</h5>
+								<span>a transformed field image in Matlab program</span>
+							</div>
+						</a>
+					</li>	
+                     <li>
+						<a href="images/p13.png" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p13.png" alt="" />
+							<div>
+								<h5>Plane Graph</h5>
+								<span>a transformed field image in Matlab program</span>
+							</div>
+						</a>
+					</li>	
+                    <li>
+						<a href="images/p14.png" class="b-link-stripe b-animate-go  thickbox">
+							<img src="images/p14.png" alt="" />
+							<div>
+								<h5>Plane Graph</h5>
+								<span>a transformed field image in C++ program</span>
+							</div>
+						</a>
+					</li>	
+				</ul>
+				<div class="clearfix"> </div>
+			</section>
+			<script type="text/javascript" src="js/jquery.hoverdir.js"></script>	
+		<script type="text/javascript">
+			$(function() {
+			
+				$(' #da-thumbs > li ').each( function() { $(this).hoverdir(); } );
+
+			});
+		</script>
+        </div>
+	</div>
+</div>
+
+    <div id="testi" class="pricing">
+	 <div class="container">
+		 <div class="pricing-text">			
+			<h3>Publication</h3>				
+		 </div>
+		 <!-- start slider -->	
+		 <div class="pricing-grids">
+			 <div class="slider">
+				 <ul class="rslides" id="slider2">
+					 <li>						 
+					     <div class="col-md-6 pricing-plans">
+                             <p>First Author of <br/>
+                              <b>Tracking Soccer Players Using Spatio-Temporal Context Learning Under Multiple Views</b><br/>
+                               submitted to <i>"Multimedia Tools and Applications"</i>.</p>
+						 </div>			  					  
+					  </li>		
+				  </ul>
+			   </div>
+			   <!-- end slider -->
+		  </div>  	
+	 </div>
+</div>
+    
+<div class="footer">
+	 <div class="container">
+		 <div class="copywrite">
+			 <p>linghan0919@163.com</p>
+		 </div>
+		 <div class="clearfix"></div>
+	 </div>
+</div>
+<!---->
+<script type="text/javascript">
+		$(document).ready(function() {
+				/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+				*/
+		$().UItoTop({ easingType: 'easeOutQuart' });
+});
+</script>
+<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<!----> 
+</body>
+</html>
