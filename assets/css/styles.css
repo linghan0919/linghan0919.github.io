@@ -80,7 +80,7 @@ a.btn-cta-secondary:hover,
   color: #32383e;
 }
 .label-theme {
-  background: #3aaa64;
+  background: #db5a6b;
   font-size: 12px;
 }
 a.dotted-link {
@@ -274,7 +274,7 @@ a.dotted-link:hover {
 .projects .item .title a:hover {
   color: #5f6b77;
 }
-.projects .item .summary .year {
+.projects .item .year {
   color: #999999;
   font-style: italic;
   font-weight: normal;

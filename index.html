@@ -42,7 +42,7 @@
                 <h2 class="desc">Computer & Information Science Student at PENN</h2>   
                 <ul class="social list-inline">
                     <li><a href="#research" title="Research Experience"><i class="fa fa-desktop"></i></a></li>               
-                    <li><a href="#cd" title="Courses Design"><i class="fa fa-book"></i></a></li>
+                    <li><a href="#cp" title="Course Projects"><i class="fa fa-book"></i></a></li>
 					<li><a href="#award" title="Honors and Rewards"><i class="fa fa-trophy"></i></a></li> 
                     <li><a href="#acti" title="Extracurricular Activities"><i class="fa fa-users"></i></a></li>
                     <li><a href="#paper" title="Publications"><i class="fa fa-pencil-square"></i></a></li> 
@@ -63,7 +63,7 @@
                         <div class="content">
 							<p>I am currently a graduate student studying at University of Pennsylvania majoring in Computer and Information Science. I had my first experience with programming when I was a freshman at Shanghai Jiao Tong University, China. And since then I have had great interest in this field. I really enjoy the feeling of being challenged and also gain a sense of achievement once I successfully figure out solutions.</p>
 							
-							<p>During my college years, I always have passion for learning new technology and spare no effort to surpass myself. I have scored above 90 in many undergraduate courses and maintained a high GPA of 3.96 so far at PENN. Besides, I have also attached great importance to hands-on experience and performed excellently in course projects (<a href="#cd" title="Courses Design">more about course projects</a>). To further sharpen my skills, I have participated in four research projects, through which, I have become more proficient in programming, and also improved my ability in applying computer knowledge to problem solving. (<a href="#research" title="Research Experience">more about research experience</a>).</p>
+							<p>During my college years, I always have passion for learning new technology and spare no effort to surpass myself. I have scored above 90 in many undergraduate courses and maintained a high GPA of 3.96 so far at PENN. Besides, I have also attached great importance to hands-on experience and performed excellently in course projects (<a href="#cp" title="Course Projects">more about course projects</a>). To further sharpen my skills, I have participated in four research projects, through which, I have become more proficient in programming, and also improved my ability in applying computer knowledge to problem solving. (<a href="#research" title="Research Experience">more about research experience</a>).</p>
                             
                             <p>In addition, I believe in "Work Hard, Play Hard" and have taken part in lots of extracurricular activities as well, such as sports competition, volunteering work and drama shows (<a href="#acti" title="Extracurricular Activities">more about activities</a>). My interests include camping and hiking, painting and reading.</p>
                          
@@ -122,31 +122,49 @@
                     </div><!--//section-inner-->                 
                 </section><!--//section-->
                 
-                <section class="projects section" id="cd">
+                <section class="projects section" id="cp">
                     <div class="section-inner">
-                        <h2 class="heading">Courses Design</h2>
+                        <h2 class="heading">Course Projects</h2>
                         <div class="content">
-                            <div class="item">
-                                <h3 class="title">Natural Language Processing -- Shallow Discourse Parsing  <a href="assets/files/NLP-report.pdf" target="_blank"><span class="label label-theme">Report</span></a></h3>
-                                <p class="summary">Independent Developer <span class="year">(2016.05-2016.06)</span></p>
-                                <p class="summary">Implemented a parser that can parse a piece of text, which contains implicit discourse relations (the discourse connective is omitted) between two adjacent or non-adjacent discourse units, into ten classes .</p>
-                                <p class="summary">Used deep learning library Keras and designed a convolutional neural network(CNN) to achieve the classification.</p>
-                                <p><a class="more-link" href="http://bcmi.sjtu.edu.cn/~zhaohai/" title="his homepage" target="_blank"><i class="fa fa-external-link"></i> Advisor: Hai Zhao</a></p>
+							<div class="item">
+                                <h3 class="title">Internet and Web Systems<span class="year">&#160;(2018.01 - 2018.04)&#160;</span><a href="assets/files/Web-report.pdf" target="_blank"><span class="label label-theme" target="_blank">Report</span></a></h3>
+								<ui>
+                                <li>Developed multi-threaded HTTP/1.1 server which can not only parse GET/HEAD/POST requests and return static files (i.e.,images, style sheets, and HTML pages), but also serve as servlet engine running Java servlets and support cookies, sessions, as well as other dynamic applications.</li>
+                                <li>Built multi-threaded topic-specific Web crawler, stored crawled XML documents in local Berkeley database, and implemented XPath engine using Recursive Descent parser and DOM parser to search for particular data so that users can register "subscription channels" and get customized output results.</li>
+								<li>Constructed distributed framework and emulated one-master, multiple-workers MapReduce architecture, which is able to handle tasks such as Word Count and Group Words.</li>
+								<li>Participated in search engine group project, createdWeb indexer using Hadoop MapReduce framework running on Amazon EMR, and built inverted index for more than 10,000 web pages.</li>
+								</ui>
+                            </div><!--//item-->
+							<div class="item">
+                                <h3 class="title">Networked Systems<span class="year">&#160;(2017.09 - 2017.12)&#160;</span></h3>
+								<ui>
+                                <li>Wrote TCP client and server programs for sending and receiving messages over the Internet in both C and Go.</li>
+                                <li>Implemented distributed distance-vector and link-state routing algorithms in Python and succeeded in finding lowest cost paths in all simulated network architectures even with link failures and additions.</li>
+								<li>Built web proxy capable of accepting HTTP requests, forwarding requests to remote servers, and returning response data to a client in Go.</li>
+								</ui>
+                            </div><!--//item-->
+							<div class="item">
+                                <h3 class="title">Computer Architecture -- Pipeline Simulation<span class="year">&#160;(2017.09 - 2017.12)&#160;</span></h3>
+								<ui>
+                                <li>Modeled standard 5-stage pipeline with all combinations of MX, WX and WM bypassing in Java.</li>
+                                <li>Integrated pipeline with cofigurable caches, and bimodal, gshare, tournament branch predictor.</li>
+								<li>Built simplified version of an OoO pipeline with register renaming and issue stages.</li>
+								</ui>
+                            </div><!--//item-->
+                            <div class="item">							
+                                <h3 class="title">Natural Language Processing -- Shallow Discourse Parsing <span class="year">&#160;(2016.05 - 2016.06)&#160;</span><a href="assets/files/NLP-report.pdf" target="_blank"><span class="label label-theme">Report</span></a></h3>
+								<ui>
+                                <li>Developed parser in Python that can parse a piece of text, which contains implicit discourse relations (the discourse connective is omitted) between two adjacent or non-adjacent discourse units, into ten classes.</li>
+                                <li>Designed convolutional neural network with deep learning Keras to achieve classification.</li>
+								</ui>
                             </div><!--//item-->
                             <div class="item">
-                                <h3 class="title">Compiler Principles -- to Implement a Simple Compiler <a href="assets/files/CP-report.pdf" target="_blank"><span class="label label-theme" target="_blank">Report</span></a></h3>
-                                <p class="summary">Independent Developer <span class="year">(2015.10-2016.01)</span></p>
-                                <p class="summary">Implemented a simplified compiler front-end, including a lexical analyzer and a syntax analyzer, with the tool FLEX and YACC in operating system Linux.</p>
-                                <p class="summary">Implemented an 1800-line  code generator to translate the intermediate representation into LLVM instructions, which includes For, While, If-Else statements and can deal with problems such as Fibonacci, Eight Queens and Greatest Common Divisor.</p>
-                                <p><a class="more-link" href="http://www.cs.sjtu.edu.cn/~jiangli/" title="his homepage" target="_blank"><i class="fa fa-external-link"></i> Advisor: Li Jiang</a></p>
-                            </div><!--//item-->
-                            <div class="item">
-                                <h3 class="title">Thinking and Approach of Programming -- to Develop a mini Game</h3>
-                                <p class="summary">Team Leader <span class="year">(2013.11-2014.01)</span></p>
-                                <p class="summary">Designed a simple one-level Block Breaker Game.</p>
-                                <p class="summary">Implemented in Python without using Pygame.</p>
-                            </div><!--//item-->
-                            
+                                <h3 class="title">Compiler Principles -- Simple Compiler<span class="year">&#160;(2015.10 - 2016.01)&#160;</span><a href="assets/files/CP-report.pdf" target="_blank"><span class="label label-theme" target="_blank">Report</span></a></h3>
+								<ui>
+								<li>Implemented simple small-c compiler that consisted of lexical analyzer, syntax analyzer, and code generator which translated intermediate representation into LLVM instructions.</li>
+                                <li>Enabled the compiler to handle problems such as Fibonacci, Eight Queens and Greatest Common Divisor.</li>
+								</ui>
+                            </div><!--//item-->                            
                         </div><!--//content-->  
                     </div><!--//section-inner-->                 
                 </section><!--//section-->
@@ -312,11 +330,11 @@
 				<aside class="publication aside section" id="paper">
                     <div class="section-inner">
                         <h2 class="heading">Publication</h2>
-                        <p><font size="2"> First Author of <br/><b>Tracking Soccer Players Using Spatio-Temporal Context Learning Under Multiple Views</b><br/>  Submitted to "Multimedia Tools and Applications"</font></p>
+                        <p><font size="2"> Zhang, P., <b>Zheng, L</b>., Jiang, Y., Mao, L., Li, Z. and Sheng, B., 2017. Tracking soccer players using spatio-temporal context learning under multiple views. Multimedia Tools and Applications, pp.1-21. <a href="https://link.springer.com/article/10.1007/s11042-017-5316-3" target="_blank">[link]</a></font></p>
                         
-                        <p><font size="2">Second Author of <br/><b>Retinal Optic Disk Localization Using Convergence Tracking of Blood Vessels</b><br/> Accepted by "Multimedia Tools and Applications"<a href="assets/files/OD-paper.pdf" target="_blank">[PDF]</a></font></p>
+                        <p><font size="2">Wang, R., <b>Zheng, L.</b>, Xiong, C., Qiu, C., Li, H., Hou, X., Sheng, B., Li, P. and Wu, Q., 2017. Retinal optic disc localization using convergence tracking of blood vessels. Multimedia Tools and Applications, 76(22), pp.23309-23331. <a href="https://link.springer.com/article/10.1007/s11042-016-4146-z?wt_mc=Internal.Event.1.SEM.ArticleAuthorOnlineFirst" target="_blank">[link]</a></font></p>
                         
-                        <p><font size="2">Second Author of<br/><b>Automatic Diabetic Retinopathy Diagnosis Using Adjustable Opthalmoscope and Multi-scale Line Operator</b><br/>Submitted to "Pervasive and Mobile Computing"</font></p>
+                        <p><font size="2">Qu, M., Ni, C., Chen, M., <b>Zheng, L.</b>, Dai, L., Sheng, B., Li, P. and Wu, Q., 2017. Automatic diabetic retinopathy diagnosis using adjustable ophthalmoscope and multi-scale line operator. Pervasive and Mobile Computing, 41, pp.490-503. <a href="https://www.sciencedirect.com/science/article/pii/S1574119217301852" target="_blank">[link]</a></font></p>
                     </div><!--//section-inner-->
                 </aside><!--//section-->
                 
